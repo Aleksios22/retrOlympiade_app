@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import games from '../data/games.json';
+</script>
+
+<main>
+  <h1>RetrOlympiades</h1>
+</main>
+
+<style>
+
+</style>
