@@ -1,13 +1,72 @@
 {
-  "hobbies": ["reading", "traveling", "painting"],
-  "name": "John Doe",
-  "age": 30,
-  "email": "johndoe@example.com",
-  "address": {
-    "street": "123 Main St",
-    "city": "Anytown",
-    "state": "NY",
-    "country": "USA"
+  "64bit": {
+    "genre": {
+      "racing": {
+        "games": [
+          {
+            "title": "F-zero",
+            "platform": "N64",
+            "year": null,
+            "publisher": "Nintendo"
+          },
+          {
+            "title": "Micromaniacs",
+            "platform": "psx",
+            "year": null,
+            "publisher": null
+          }
+        ]
+      },
+      "sport": {
+        "games": [
+          {
+            "title": "Mario Tennis",
+            "platform": "N64",
+            "year": null,
+            "publisher": "Nintendo"
+          },
+          {
+            "title": "Mario Golf",
+            "platform": "N64",
+            "year": null,
+            "publisher": "Nintendo"
+          },
+          {
+            "title": "Snowboard Kids",
+            "platform": "N64",
+            "year": null,
+            "publisher": null
+          }
+        ]
+      }
+    }
   },
-  "hobbies": ["reading", "traveling", "painting"]
+  "16bit": {
+    "genre": {
+      "arcade": {
+        "games": [
+
+        ]
+      },
+      "sport": {
+        "games": [
+
+        ]
+      }
+    }
+  },
+  "8bit": {
+    "genre": {
+      "arcade": {
+        "games": [
+
+        ]
+      },
+      "sport": {
+        "games": [
+
+        ]
+      }
+    }
+  }
 }
