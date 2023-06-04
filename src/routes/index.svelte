@@ -1,6 +1,8 @@
 <script>
   import gamesData from '../data/games.json';
   let games = Object.values(gamesData['64bit']['genre']).flatMap(genre => genre.games);
+</script>
+
 <main>
 <h1>64-bit Games</h1>
 <button on:click={() => games = []}>Clear List</button>
