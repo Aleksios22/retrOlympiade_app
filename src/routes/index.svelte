@@ -1,37 +1,23 @@
 <script>
-   import { onMount } from 'svelte';
-
-  let games64bit = [];
-
-  // Retrieve the "64bit" games and flatten them into a single array
-  onMount(async () => {
-    const response = await fetch('/data/games.json');
-    const gameData = await response.json();
-    games64bit = Object.values(gameData["64bit"].genre)
-      .flatMap(genre => genre.games);
-  });
-
-  let selectedGame = null;
-
-  function selectRandomGame() {
-    selectedGame = games64bit[Math.floor(Math.random() * games64bit.length)];
-  }
+    import gamesData from '../data/games.json';
+    let n64games = gamesData['64bit']['genre'];
 </script>
 
 <main>
 <h1>64-bit Games</h1>
 
-<button on:click={selectRandomGame}>Select Random Game</button>
+<button >Select Random Game</button>
+ <button on:click={() => n64games = []}>Clear List</button>
+  <button on:click={() => n64games = gamesData['64bit']['genre'].racing.games}>Racing</button>
+  <button on:click={() => n64games = gamesData['64bit']['genre'].sport.games}>Sport</button>
 
-{#if selectedGame}
-  <div>
-    <h2>Random Game</h2>
-    <p>Title: {selectedGame.title}</p>
-    <p>Platform: {selectedGame.platform}</p>
-    <p>Publisher: {selectedGame.publisher}</p>
-    <p>Year: {selectedGame.year}</p>
-  </div>
-{/if}
+    <ul>
+    {#each n64games as game}
+      <li>{game.title} - {game.platform}</li>
+    {/each}
+  </ul>
+
+
 </main>
 
 <style>
