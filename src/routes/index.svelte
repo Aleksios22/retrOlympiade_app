@@ -1,15 +1,13 @@
 <script>
-    import gamesData from '../data/games.json';
-    let n64games = gamesData;
-</script>
+  import gamesData from '../data/games.json';
+  let games = gamesData['64bit']['genre'];</script>
 
 <main>
 <h1>64-bit Games</h1>
 
-    <ul>
-      <li>{n64games}</li>
-
-  </ul>
+<button on:click={() => games = []}>Clear List</button>
+  <button on:click={() => games = gamesData['64bit']['genre'].racing.games}>Racing</button>
+  <button on:click={() => games = gamesData['64bit']['genre'].sport.games}>Sport</button>
 
 
 </main>
